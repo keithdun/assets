@@ -1,0 +1,49 @@
+name: Deploy to IPFS via Storacha
+
+on:
+  push:
+    branches:
+      - storacha
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install w3cli
+        run: npm install -g @web3-storage/w3cli
+
+      - name: Upload to Storacha
+        run: |
+          echo "${{ z6MkvRhStNQ9uFmsKvdzHCxEAgkVhHdwwULG8S8drAgVQu2i }}" > private.key
+          echo "${{ EaJlcm9vdHOAZ3ZlcnNpb24B2AYBcRIgAjcy3OzQtv7c0ymQv3dpQCXkcv8lD/uaBJNB9bMW/Xmo
+YXNYRO2hA0BsIFwu+iImVifaqy1+xpRKcmwDVfnPCqSDMEFhgqmwnYbDsY6OpKgUjrssH+Sy7yDS
+miJBNjxWpsszwJZHDuEPYXZlMC45LjFjYXR0iKJjY2FuZ3NwYWNlLypkd2l0aHg4ZGlkOmtleTp6
+Nk1rdlJoU3ROUTl1Rm1zS3ZkekhDeEVBZ2tWaEhkd3dVTEc4UzhkckFnVlF1MmmiY2NhbmZibG9i
+Lypkd2l0aHg4ZGlkOmtleTp6Nk1rdlJoU3ROUTl1Rm1zS3ZkekhDeEVBZ2tWaEhkd3dVTEc4Uzhk
+ckFnVlF1MmmiY2NhbmdpbmRleC8qZHdpdGh4OGRpZDprZXk6ejZNa3ZSaFN0TlE5dUZtc0t2ZHpI
+Q3hFQWdrVmhIZHd3VUxHOFM4ZHJBZ1ZRdTJpomNjYW5nc3RvcmUvKmR3aXRoeDhkaWQ6a2V5Ono2
+TWt2UmhTdE5ROXVGbXNLdmR6SEN4RUFna1ZoSGR3d1VMRzhTOGRyQWdWUXUyaaJjY2FuaHVwbG9h
+ZC8qZHdpdGh4OGRpZDprZXk6ejZNa3ZSaFN0TlE5dUZtc0t2ZHpIQ3hFQWdrVmhIZHd3VUxHOFM4
+ZHJBZ1ZRdTJpomNjYW5oYWNjZXNzLypkd2l0aHg4ZGlkOmtleTp6Nk1rdlJoU3ROUTl1Rm1zS3Zk
+ekhDeEVBZ2tWaEhkd3dVTEc4UzhkckFnVlF1MmmiY2NhbmpmaWxlY29pbi8qZHdpdGh4OGRpZDpr
+ZXk6ejZNa3ZSaFN0TlE5dUZtc0t2ZHpIQ3hFQWdrVmhIZHd3VUxHOFM4ZHJBZ1ZRdTJpomNjYW5n
+dXNhZ2UvKmR3aXRoeDhkaWQ6a2V5Ono2TWt2UmhTdE5ROXVGbXNLdmR6SEN4RUFna1ZoSGR3d1VM
+RzhTOGRyQWdWUXUyaWNhdWRYIu0BzWaYYy0jI/MfOyYxMcuxmEydjzUP+OQM7hgRAavup8VjZXhw
+GmpLx89jZmN0gaFlc3BhY2WhZG5hbWVpREdDIFNwYWNlY2lzc1gi7QHtVI0J2ToWyjqpGMV6QNVe
+hSxoJV/AMtb13hDGK6zfK2NwcmaA3QQBcRIgyJyoZ+16Q5Ei7SLHZZIF+rvEU5gs7eEo1CY95iH8
+66ioYXNYRO2hA0A/u4ztTz5oRT9IKsCgIAaVw3YcXHE1E6qNQ1hzeML3eJCQRig0IaEMfwiAM5b9
+nhLbgsKrYDE6kKC2ygag1H0FYXZlMC45LjFjYXR0hKJjY2FuaXN0b3JlL2FkZGR3aXRoeDhkaWQ6
+a2V5Ono2TWt2UmhTdE5ROXVGbXNLdmR6SEN4RUFna1ZoSGR3d1VMRzhTOGRyQWdWUXUyaaJjY2Fu
+anVwbG9hZC9hZGRkd2l0aHg4ZGlkOmtleTp6Nk1rdlJoU3ROUTl1Rm1zS3ZkekhDeEVBZ2tWaEhk
+d3dVTEc4UzhkckFnVlF1MmmiY2Nhbm5zcGFjZS9ibG9iL2FkZGR3aXRoeDhkaWQ6a2V5Ono2TWt2
+UmhTdE5ROXVGbXNLdmR6SEN4RUFna1ZoSGR3d1VMRzhTOGRyQWdWUXUyaaJjY2Fub3NwYWNlL2lu
+ZGV4L2FkZGR3aXRoeDhkaWQ6a2V5Ono2TWt2UmhTdE5ROXVGbXNLdmR6SEN4RUFna1ZoSGR3d1VM
+RzhTOGRyQWdWUXUyaWNhdWRYIu0B7VSNCdk6Fso6qRjFekDVXoUsaCVfwDLW9d4Qxius3ytjZXhw
+9mNmY3SBoWVzcGFjZaFkbmFtZWlER0MgU3BhY2VjaXNzWCLtAc1mmGMtIyPzHzsmMTHLsZhMnY81
+D/jkDO4YEQGr7qfFY3ByZoHYKlglAAFxEiACNzLc7NC2/tzTKZC/d2lAJeRy/yUP+5oEk0H1sxb9
+eQ== }}" | base64 -d > delegation.json
+          w3 space use did:key:YOUR_SPACE_DID_HERE
+          w3 upload blockchains/ethereum/assets/0x018bbb44Bb0B3D67fe85070c083E5cf724a6fdad
