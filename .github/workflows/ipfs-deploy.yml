@@ -1,4 +1,4 @@
-name: Deploy to IPFS via Storacha
+nano .github/workflows/ipfs-deploy.ymlname: Deploy to IPFS via Storacha
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
         run: npm install -g @web3-storage/w3cli
 
       - name: Upload to Storacha
-        run: |
+      run: |
           echo "${{ z6MkvRhStNQ9uFmsKvdzHCxEAgkVhHdwwULG8S8drAgVQu2i }}" > private.key
           echo "${{ EaJlcm9vdHOAZ3ZlcnNpb24B2AYBcRIgAjcy3OzQtv7c0ymQv3dpQCXkcv8lD/uaBJNB9bMW/Xmo
 YXNYRO2hA0BsIFwu+iImVifaqy1+xpRKcmwDVfnPCqSDMEFhgqmwnYbDsY6OpKgUjrssH+Sy7yDS
